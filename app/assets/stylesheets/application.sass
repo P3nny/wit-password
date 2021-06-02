@@ -1,14 +1,103 @@
-body
-  background-color: #46AE5F
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lato:wght@400;700&display=swap')
 
-.content
+\:root
+  --color-primary: #e68e5b
+  --color-primary-light: #eaa278
+  --color-secondary: #25485e
+
+html, body
+  margin: 0
+  font-family: "Lato", sans-serif
+  font-weight: bold
+  background-color: var(--color-secondary)
+
+.wrapper
+  position: relative
   display: flex
   flex-direction: column
-  margin: 4rem
-.card
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08)
-  border-radius: 0.5rem
-  background: white
-  min-height: 13rem
-  margin: 3rem
-  padding: 2 rem
+  height: 100vh
+
+.container
+  position: relative
+  padding-top: 100px
+  padding-bottom: 40px
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 100%
+
+.box
+  width: 70%
+  padding: 16px 24px
+  margin-bottom: 24px
+
+.wit-password
+  font-family: "Caveat Brush", cursive
+  font-size: 90px
+  text-transform: uppercase
+  text-align: center
+  background-color: #fff
+  color: var(--color-primary)
+  display: flex
+  align-items: center
+  justify-content: center
+
+  span
+    &:first-child
+      color: var(--color-secondary)
+
+    + span::before
+      content: "-"
+
+@media screen and (max-width: 500px)
+  .wit-password
+    font-size: 32px
+
+.wit-details
+  background-color: #fff
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+.wit-image-container
+  width: 20%
+
+.wit-bio
+  width: calc(80% - 24px)
+  font-size: 18px
+  letter-spacing: 0.025em
+  color: var(--color-primary)
+
+.first-word
+  color: var(--color-secondary)
+
+.btn-container
+  display: flex
+  align-items: center
+  justify-content: center
+
+  button, a
+    font-family: inherit
+    font-weight: bold
+    color: #fff
+    background-color: var(--color-primary)
+    border: none
+    font-size: 20px
+    min-height: 20px
+    padding: 16px 32px
+    margin: 0px 16px
+    letter-spacing: 0.05em
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1)
+
+    &:hover
+      cursor: pointer
+      background-color: var(--color-primary-light)
+
+.top-left-pattern
+  color: var(--color-primary)
+  position: absolute
+  top: -6px
+  left: -6px
+
+  svg
+    fill: currentColor

@@ -1,7 +1,7 @@
 class PersonsController < ApplicationController
   def show
-    persons = Person.all.pluck(:firstname).sample(3)
-    @bio = Person.find_by(firstname: persons.first).bio
-    @password = persons.join('-')
+    @names = Person.all.pluck(:firstname).sample(3)
+    @bio = Person.find_by(firstname: @names.first).bio
+    @password = @names.join('-')
   end
 end

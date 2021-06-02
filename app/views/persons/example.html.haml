@@ -12,17 +12,18 @@
       %use{"xlink:href" => "#frame-9"}
   .container
     .box.wit-password
-      - @names.each do |name|
-        %span= name
-
+      %span mae
+      %span margret
+      %span ada
     .box.wit-details
       .wit-image-container
         %img{:src => "https://upload.wikimedia.org/wikipedia/commons/5/55/Mae_Carol_Jemison.jpg", :width => "100%"}/
       .wit-bio
-        %span.first-word= @names.first
-        = @bio
+        %span.first-word Mae
+        Carol Jemison ist eine US-amerikanische Ärztin und ehemalige Astronautin.
+        Ihr Flug mit der Endeavour (Raumfähre) am 12. September 1992 machte sie zur ersten Afroamerikanerin im All.
     .box.btn-container
-      = link_to('Passwort generieren', root_path)
+      %button{:type => "button"} Generate
       %button{:type => "button"} Copy
 %svg{:style => "display: none", :xmlns => "http://www.w3.org/2000/svg"}
   %symbol#frame-1{:viewbox => "0 0 400 400"}
